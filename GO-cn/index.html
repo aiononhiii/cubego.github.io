@@ -1,158 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MoFang GO</title>
-
+    <title>魔方 GO</title>
     <meta property="og:title" content="魔方 GO">
     <meta property="og:description" content="同一打乱，同场竞技，点击加入好友的 GO 挑战！">
     <meta property="og:image" content="https://mofanggo.com/assets/mofanggo.png">
-
     <link rel="stylesheet" href="../styles.css">
-
 </head>
-
 <body>
-
-<div id="browserTip" class="browser-tip">
-    <span id="browserTipText"></span>
+<div class="browser-tip">
+    <span >如果应用未自动打开，请点击右上角 ⋯ 并选择\"在浏览器打开\"。</span>
 </div>
-
 <div class="container">
     <div class="launcher-card">
-
         <img class="icon-placeholder"
              src="../assets/mofanggo.png"
              alt="MoFang GO"
              width="100%"
              height="100%"
              style="border-radius:13px;">
-
-        <h3 id="appName">MoFang GO</h3>
-
+        <h3>魔方 GO</h3>
         <div class="desktop-view">
-
-            <h2 id="title"></h2>
-
+            <h2>下载方式</h2>
             <div class="download-options">
-
                 <a href="https://apps.apple.com/us/app/mofanggo-go-app/id6768899720"
                    class="btn btn-store btn-appstore">
-
                     <span>App Store</span>
                 </a>
-
                 <a href="https://play.google.com/store/apps/details?id=shanfangjie.lgf.mf"
                    class="btn btn-store btn-googleplay">
-
                     <span>Google Play</span>
                 </a>
-
             </div>
-
-            <p id="hint" class="desktop-hint"></p>
-
+            <p class="desktop-hint">请选择您希望下载的平台</p>
         </div>
     </div>
 </div>
-
-<script>
-
-const translations = {
-
-    en_US: {
-        pageTitle: "MoFang GO",
-        appName: "MoFang GO",
-
-        shareTitle: "MoFang GO",
-        shareDescription: "Same scramble, same challenge. Join your friend's GO challenge now!",
-
-        title: "Download Options",
-        hint: "Choose your preferred platform to download the app",
-
-        browserTip: "If the app doesn't open automatically, tap ⋯ and choose \"Open in Browser\"."
-    },
-
-    zh_CN: {
-        pageTitle: "魔方 GO",
-        appName: "魔方 GO",
-
-        shareTitle: "魔方 GO",
-        shareDescription: "同一打乱，同场竞技，点击加入好友的 GO 挑战！",
-
-        title: "下载方式",
-        hint: "请选择您希望下载的平台",
-
-        browserTip: "如果应用未自动打开，请点击右上角 ⋯ 并选择“在浏览器打开”。"
-    },
-
-    zh_HK: {
-        pageTitle: "魔方 GO",
-        appName: "魔方 GO",
-
-        shareTitle: "魔方 GO",
-        shareDescription: "同一打亂，同場競技，點擊加入好友的 GO 挑戰！",
-
-        title: "下載方式",
-        hint: "請選擇您希望下載的平台",
-
-        browserTip: "如果應用程式未自動開啟，請點擊右上角 ⋯ 並選擇「在瀏覽器中開啟」。"
-    },
-
-    ja_JP: {
-        pageTitle: "キューブ GO",
-        appName: "キューブ GO",
-
-        shareTitle: "キューブ GO",
-        shareDescription: "同じスクランブルで真剣勝負。友達のGOチャレンジに参加しよう！",
-
-        title: "ダウンロード方法",
-        hint: "ご利用のプラットフォームを選択してください",
-
-        browserTip: "アプリが自動で開かない場合は、右上の ⋯ をタップして「ブラウザで開く」を選択してください。"
-    },
-
-    ko_KR: {
-        pageTitle: "큐브 GO",
-        appName: "큐브 GO",
-
-        shareTitle: "큐브 GO",
-        shareDescription: "같은 스크램블, 같은 도전. 친구의 GO 챌린지에 참여하세요!",
-
-        title: "다운로드 방법",
-        hint: "원하는 플랫폼을 선택하여 앱을 다운로드하세요",
-
-        browserTip: "앱이 자동으로 열리지 않으면 오른쪽 상단의 ⋯ 버튼을 눌러 '브라우저에서 열기'를 선택하세요."
-    }
-};
-
-const params = new URLSearchParams(window.location.search);
-
-const lang = params.get('lang') || 'en_US';
-
-const locale = translations[lang] || translations.en_US;
-
-document.documentElement.lang = lang;
-
-document.title = locale.pageTitle;
-
-document.getElementById('appName').textContent = locale.appName;
-document.getElementById('title').textContent = locale.title;
-document.getElementById('hint').textContent = locale.hint;
-
-// 普通浏览器动态更新（注意：微信分享卡片不会读取这里）
-document.querySelector('meta[property="og:title"]')
-    ?.setAttribute('content', locale.shareTitle);
-
-document.querySelector('meta[property="og:description"]')
-    ?.setAttribute('content', locale.shareDescription);
-
-document.getElementById('browserTipText').textContent = locale.browserTip;
-
-</script>
-
 </body>
 </html>
