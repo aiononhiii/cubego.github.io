@@ -17,15 +17,8 @@
 
 <body>
 
-<div id="appMask" class="wechat-mask">
-    <div class="wechat-content">
-        <div class="wechat-arrow">↗</div>
-
-        <h2 id="browserTitle"></h2>
-
-        <p id="browserDesc1"></p>
-        <p id="browserDesc2"></p>
-    </div>
+<div id="browserTip" class="browser-tip">
+    <span id="browserTipText"></span>
 </div>
 
 <div class="container">
@@ -81,9 +74,7 @@ const translations = {
         title: "Download Options",
         hint: "Choose your preferred platform to download the app",
 
-        browserTitle: "Open in Your Browser",
-        browserDesc1: "This messaging app may block app launches",
-        browserDesc2: "Tap ⋯ in the top-right corner and select \"Open in Browser\""
+        browserTip: "If the app doesn't open automatically, tap ⋯ and choose \"Open in Browser\"."
     },
 
     zh_CN: {
@@ -97,9 +88,7 @@ const translations = {
         title: "下载方式",
         hint: "请选择您希望下载的平台",
 
-        browserTitle: "请在浏览器中打开",
-        browserDesc1: "当前通讯软件限制应用跳转",
-        browserDesc2: "点击右上角 ⋯ 选择「在浏览器打开」"
+        browserTip: "如果应用未自动打开，请点击右上角 ⋯ 并选择“在浏览器打开”。"
     },
 
     zh_HK: {
@@ -113,9 +102,7 @@ const translations = {
         title: "下載方式",
         hint: "請選擇您希望下載的平台",
 
-        browserTitle: "請在瀏覽器中開啟",
-        browserDesc1: "目前通訊軟體限制應用程式跳轉",
-        browserDesc2: "點擊右上角 ⋯ 選擇「在瀏覽器中開啟」"
+        browserTip: "如果應用程式未自動開啟，請點擊右上角 ⋯ 並選擇「在瀏覽器中開啟」。"
     },
 
     ja_JP: {
@@ -129,9 +116,7 @@ const translations = {
         title: "ダウンロード方法",
         hint: "ご利用のプラットフォームを選択してください",
 
-        browserTitle: "ブラウザで開いてください",
-        browserDesc1: "このメッセージアプリではアプリ起動が制限される場合があります",
-        browserDesc2: "右上の「⋯」をタップして「ブラウザで開く」を選択してください"
+        browserTip: "アプリが自動で開かない場合は、右上の ⋯ をタップして「ブラウザで開く」を選択してください。"
     },
 
     ko_KR: {
@@ -145,9 +130,7 @@ const translations = {
         title: "다운로드 방법",
         hint: "원하는 플랫폼을 선택하여 앱을 다운로드하세요",
 
-        browserTitle: "브라우저에서 열어주세요",
-        browserDesc1: "현재 메시지 앱에서는 앱 실행이 제한될 수 있습니다",
-        browserDesc2: "오른쪽 상단의 ⋯ 버튼을 누른 후 '브라우저에서 열기'를 선택하세요"
+        browserTip: "앱이 자동으로 열리지 않으면 오른쪽 상단의 ⋯ 버튼을 눌러 '브라우저에서 열기'를 선택하세요."
     }
 };
 
@@ -172,37 +155,7 @@ document.querySelector('meta[property="og:title"]')
 document.querySelector('meta[property="og:description"]')
     ?.setAttribute('content', locale.shareDescription);
 
-function isInAppBrowser() {
-
-    const ua = navigator.userAgent.toLowerCase();
-
-    return (
-        ua.includes('micromessenger') || // WeChat
-        ua.includes('whatsapp') ||
-        ua.includes('line') ||
-        ua.includes('kakaotalk') ||
-        ua.includes('instagram') ||
-        ua.includes('fbav') ||
-        ua.includes('fban') ||
-        ua.includes('telegram') ||
-        ua.includes('discord') ||
-        ua.includes('twitter')
-    );
-}
-
-if (isInAppBrowser()) {
-
-    document.getElementById('browserTitle').textContent =
-        locale.browserTitle;
-
-    document.getElementById('browserDesc1').textContent =
-        locale.browserDesc1;
-
-    document.getElementById('browserDesc2').textContent =
-        locale.browserDesc2;
-
-    document.getElementById('appMask').style.display = 'block';
-}
+document.getElementById('browserTipText').textContent = locale.browserTip;
 
 </script>
 
