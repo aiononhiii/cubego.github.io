@@ -1,16 +1,10 @@
-/cn /cn/index.html 200
-/hk /hk/index.html 200
-/en /en/index.html 200
-/ja /ja/index.html 200
-/ko /ko/index.html 200
+/cn /cn.html 200
+/hk /hk.html 200
+/en /en.html 200
+/ja /ja.html 200
+/ko /ko.html 200
 
-/cn/home /cn/home/index.html 200
-/hk/home /hk/home/index.html 200
-/en/home /en/home/index.html 200
-/ja/home /ja/home/index.html 200
-/ko/home /ko/home/index.html 200
-
-/privacy /privacy/index.html 200
-/terms /terms/index.html 200
-/about /privacy/index.html 200
+/privacy /privacy.html 200
+/terms /terms.html 200
+/about /about.html 200
 
