@@ -181,6 +181,36 @@ h3 {
     margin-top: 15px;
 }
 
+.wechat-mask {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 99999;
+}
+
+.wechat-content {
+    color: white;
+    text-align: center;
+    padding: 24px;
+    margin-top: 80px;
+}
+
+.wechat-arrow {
+    text-align: right;
+    font-size: 56px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.wechat-content h2 {
+    margin-bottom: 20px;
+}
+
+.wechat-content p {
+    line-height: 1.8;
+    opacity: .9;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .launcher-card {
