@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "shanfangjie.lgf.mf",
+    "sha256_cert_fingerprints":
+    ["9E:37:E4:75:E5:42:DB:71:5A:27:D2:24:7F:65:62:38:21:48:44:45:56:6D:45:57:A8:09:F3:6A:06:2A:4D:57"]
+  }
+}]
