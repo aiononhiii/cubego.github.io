@@ -4,7 +4,7 @@
        "details": [
            {
                "appID": "3YB9MNL9N4.shanfangjie.lgf.mf",
-               "paths": ["/go/*","/GO/*","*"]
+               "paths": ["/go/*","/GO/*"]
            }
        ]
    }
