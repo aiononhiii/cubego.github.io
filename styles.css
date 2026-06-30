@@ -99,6 +99,35 @@ h3 {
     width: 100%;
 }
 
+.btn-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-top-store {
+    background: #f8f9fa;
+    color: #848484;
+    border: 1px solid #e9ecef;
+}
+
+.btn-top-googleplay {
+    background: #ffffff;
+    color: rgb(88, 88, 88);
+    border-color: #b5b5b5;
+}
+
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -206,6 +235,28 @@ h3 {
 
     z-index: 999;
 }
+
+.icp-footer {
+      position: fixed; /* 固定定位，永久悬浮底部 */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #f8f8f8;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 13px;
+      z-index: 999; /* 层级最高，不会被其他元素盖住 */
+      border-top: 1px solid #eee;
+}
+.icp-footer a {
+      color: #666;
+      text-decoration: none;
+}
+.icp-footer a:hover {
+      color: #0066cc;
+}
+    
+    
 
 /* Responsive Design */
 @media (max-width: 768px) {
