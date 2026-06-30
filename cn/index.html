@@ -18,6 +18,7 @@
                 isWeChat() ? "block" : "none";
             document.getElementById("openButtonTip").style.display =
                 isWeChat() ? "none" : "block";
+            updateButtonText();
         });
         function isWeChat() {
             return /MicroMessenger/i.test(navigator.userAgent);
