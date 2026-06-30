@@ -13,17 +13,18 @@
 
 <body>
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("browserTip").style.display =
+                isWeChat() ? "block" : "none";
+        });
+        function isWeChat() {
+            return /MicroMessenger/i.test(navigator.userAgent);
+        }
         function openCubeApp() {
             const base = "mofanggo://go";
             const params = window.location.search;
             const jumpUrl = base + params;
-
             window.location.href = jumpUrl;
-
-            // 延迟兜底，没唤起App跳应用市场
-            setTimeout(() => {
-                window.location.href = "华为应用市场App地址";
-            }, 700);
         }
     </script>
     <div class="browser-tip">
@@ -31,7 +32,8 @@
         <br>
         <br>
         <br>
-        <span class="btn-top btn-top-store btn-top-googleplay" onclick="openCubeApp()">如果还未打开请点击我开启魔方GO</span>
+        <span id="browserTip" class="browser-tip btn-top btn-top-store btn-top-googleplay"
+            onclick="openCubeApp()">如果还未打开请点击我开启魔方GO</span>
     </div>
     <div class="container">
         <div class="launcher-card">
