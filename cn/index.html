@@ -23,10 +23,25 @@
             return /MicroMessenger/i.test(navigator.userAgent);
         }
         function openCubeApp() {
-            const base = "mofanggo://go";
-            const params = window.location.search;
-            const jumpUrl = base + params;
-            window.location.href = jumpUrl;
+            // const base = "mofanggo://go";
+            // const params = window.location.search;
+            // const jumpUrl = base + params;
+            // window.location.href = jumpUrl;
+            // 解析当前页面全部参数
+            const urlParams = new URLSearchParams(window.location.search);
+            let intentParams = "";
+            urlParams.forEach((val, key) => {
+                intentParams += `S.${key}=${encodeURIComponent(val)};`;
+            });
+
+            const pkg = "shanfangjie.lgf.mf";
+            const intentUrl = `intent://open#Intent;scheme=mofanggo;package=${pkg};${intentParams}end`;
+
+            window.location.href = intentUrl;
+
+            setTimeout(() => {
+                window.history.back();
+            }, 1200);
         }
         function updateButtonText() {
             const params = new URLSearchParams(window.location.search);
