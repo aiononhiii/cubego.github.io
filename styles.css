@@ -132,7 +132,7 @@ h3 {
     display: none;
 }
 
-.open-button-tip {
+. {
     display: none;
 }
 
@@ -249,7 +249,7 @@ h3 {
     top: 12px;
     right: 12px;
 
-    max-width: 280px;
+    max-width: 190px;
 
     padding: 10px 14px;
 
