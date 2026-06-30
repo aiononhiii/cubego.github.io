@@ -244,6 +244,32 @@ h3 {
     z-index: 999;
 }
 
+.open-button-tip {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+
+    max-width: 280px;
+
+    padding: 10px 14px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.92);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #666;
+
+    z-index: 999;
+}
+
 .icp-footer {
       position: fixed; /* 固定定位，永久悬浮底部 */
       bottom: 0;
