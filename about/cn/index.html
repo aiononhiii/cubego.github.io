@@ -1,121 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于魔方 GO</title>
+    <title>魔法 GO - 关于我们</title>
 
-    <link rel="stylesheet" href="../../styles.css">
+    <meta name="description" content="魔方 GO 关于我们">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .icp-footer {
+            position: fixed;
+            /* 固定定位，永久悬浮底部 */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #f8f8f8;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 13px;
+            z-index: 999;
+            /* 层级最高，不会被其他元素盖住 */
+            border-top: 1px solid #eee;
+        }
+
+        .icp-footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .icp-footer a:hover {
+            color: #0066cc;
+        }
+
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-            background: #fff;
-            color: #222;
+            padding: 0;
+            background: #f5f7fb;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.75;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 24px;
-        }
-
-        .logo {
-            width: 90px;
-            height: 90px;
-            border-radius: 20px;
-        }
-
-        h1 {
-            margin: 20px 0 10px;
-        }
-
-        .section {
-            margin-top: 30px;
-        }
-
-        p {
-            line-height: 1.7;
-            color: #333;
+            padding: 15px;
         }
 
         .card {
-            background: #f6f6f6;
-            padding: 16px;
-            border-radius: 12px;
-            margin-top: 10px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .updated {
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            text-align: center;
         }
     </style>
-
 </head>
 
 <body>
 
     <div class="container">
 
-        <img class="logo" src="../../assets/mofanggo.png" />
+        <div class="card">
 
-        <h1>
-            魔方 GO
-        </h1>
+            <img class="logo" src="../../assets/mofanggo.png" />
 
-        <p>
-            速拧计时与挑战应用
-        </p>
-
-        <div class="section">
-            <h3>
-                关于
-            </h3>
+            <h1>
+                魔方 GO
+            </h1>
 
             <p>
-                魔方 GO 是一款速拧计时与挑战平台，用于练习、及共享复原体验。
+                速拧计时与训练应用
             </p>
-        </div>
 
-        <div class="section">
-            <h3>
-                理念
-            </h3>
+            <div class="section">
+                <h3>
+                    关于
+                </h3>
 
-            <p>
-                我们专注于简洁、公平与纯粹的复原体验。
-                没有干扰，只有你、魔方与时间。
-            </p>
-        </div>
-
-        <div class="section">
-            <h3>
-                GO 训练
-            </h3>
-            <p>
-                GO 训练功能允许玩家共享同一次计时打乱。
-            </p>
-        </div>
-
-        <div class="section">
-            <h3>
-                隐私
-            </h3>
-
-            <p>
-                所有解法数据均保存在您的设备本地。
-                我们不会收集或上传任何个人数据。
-        </div>
-
-        <div class="section">
-            <h3>
-                支持
-            </h3>
-
-            <div class="card">
-                support@mofanggo.com
+                <p>
+                    魔方 GO 是一款速拧计时与训练平台，用于练习、及共享复原体验。
+                </p>
             </div>
+
+            <div class="section">
+                <h3>
+                    理念
+                </h3>
+
+                <p>
+                    我们专注于简洁、公平与纯粹的复原体验。
+                    没有干扰，只有你、魔方与时间。
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>
+                    GO 训练
+                </h3>
+                <p>
+                    GO 训练功能允许玩家共享同一次计时打乱。
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>
+                    隐私
+                </h3>
+
+                <p>
+                    所有解法数据均保存在您的设备本地。
+                    我们不会收集或上传任何个人数据。
+            </div>
+
+            <div class="section">
+                <h3>
+                    支持
+                </h3>
+
+                <div class="card">
+                    support@mofanggo.com
+                </div>
+            </div>
+
+            <div class="footer">
+                © 2026 魔方 GO. 保留所有权利。
+            </div>
+
         </div>
 
     </div>
+
+    </div>
+
+    <br>
+    <br>
 
     <div class="icp-footer">
         <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2026047506号</a>
